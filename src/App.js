@@ -3,6 +3,14 @@ import Header from "./Header.js";
 import './App.css';
 class App extends Component{
 
+  constructor()
+  {
+    super();
+    this.state={
+      subscribersListToShow: []
+    }
+  }
+
   deleteHandler(message){
     alert(message)
   }
@@ -10,21 +18,21 @@ class App extends Component{
     alert('alter the content')
   }
   render(){
-    let subscribers=[
-      {
-          id: 1,
-          name: "abc",
-          phone : '12345'
-      },
-     {          id: 2,
-      name: 'abdeddc',
-      phone: '12345'
-    },
-     {   id: 3,
-      name: 'adsdbc',
-      phone: '12345'
-    }
-    ]
+    // let subscribers=[
+    //   {
+    //       id: 1,
+    //       name: "abc",
+    //       phone : '12345'
+    //   },
+    //  {          id: 2,
+    //   name: 'abdeddc',
+    //   phone: '12345'
+    // },
+    //  {   id: 3,
+    //   name: 'adsdbc',
+    //   phone: '12345'
+    // }
+    // ]
   
 
     return(
@@ -40,7 +48,7 @@ class App extends Component{
                 </div> 
 
             {
-              subscribers.map(sub =>{
+              this.state.subscribersListToShow.map(sub =>{
                 return <div key={sub.id} className='grid-container'>
                   <span className='grid-item'>{sub.name}</span>
                   <span className='grid-item'>{sub.phone}</span>
