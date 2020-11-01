@@ -7,8 +7,17 @@ class PhoneDirectory extends Component{
     constructor(){
         super();
         this.state={
-            subscribersList: []
-        }
+            subscribersList: [{
+                id: 1,
+                name: 'abc ',
+                phone: '55555'
+            },
+            {
+                id: 2,
+                name: 'def ',
+                phone: '77777'
+            }
+        ]}
     }
 
     deleteSubscriberHandler = (subscriberId)=>{
