@@ -43,9 +43,7 @@ class ShowSubscribers extends Component{
   }
 
   render(){
-   
-    console.log('render called')
-
+    
     return(
         <div className="component-container">
           {/*comment */}

@@ -32,7 +32,7 @@ class AddSubscriber extends Component{
         const {name, phone}=this.state;
         return (
             <div>
-                <Header heading="AddSubscriber "/>
+                <Header heading="Add Subscriber "/>
                 <div className="component-body-container">
                     <Link to='/'><button className='custom-btn'>Back</button></Link>
                    
@@ -45,7 +45,7 @@ class AddSubscriber extends Component{
                         <div className="subscriber-info-container">
                             <span className="subscriber-to-add-heading">subscriber to be added: </span><br/>
                             <span className="subscriber-info">Name:{name} </span><br/>
-                            <span className="ubscriber-info">Phone:{phone} </span><br/>
+                            <span className="subscriber-info">Phone:{phone} </span><br/>
                         </div>
 
                         <button type="submit" className="custom-btn add-btn">Add</button>
