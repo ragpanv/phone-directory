@@ -1,39 +1,44 @@
 import React, {Component} from 'react';
 import Header from "./Header.js";
-import './App.css';
-class App extends Component{
+import './ShowSubscribers.css';
+class ShowSubscribers extends Component{
 
-  constructor()
+ /* constructor()
   {
     super();
     this.state={
       subscribersListToShow: []
     }
+    console.log('constructor called')
   }
+
+  componentDidMount(){
+    let newSubscriber=
+      {
+          id: 1,
+          name: "abc",
+          phone : '12345'
+      };
+     
+    let subscribersList=this.state.subscribersListToShow;
+    subscribersList.push(newSubscriber);
+    this.setState({subscribersListToShow: subscribersList});
+
+    console.log('component did mount called')
+  }
+
 
   deleteHandler(message){
     alert(message)
   }
+  <button className="custom-btn delete-btn" onClick={this.deleteHandler.bind(this,'Delete Clicked')}>Delete</button>
+
   alterHandler(){
     alert('alter the content')
-  }
+  }*/
   render(){
-    // let subscribers=[
-    //   {
-    //       id: 1,
-    //       name: "abc",
-    //       phone : '12345'
-    //   },
-    //  {          id: 2,
-    //   name: 'abdeddc',
-    //   phone: '12345'
-    // },
-    //  {   id: 3,
-    //   name: 'adsdbc',
-    //   phone: '12345'
-    // }
-    // ]
-  
+   
+    console.log('render called')
 
     return(
         <div className="component-container">
@@ -44,17 +49,16 @@ class App extends Component{
 
                 <div className="grid-container heading-container">
                     <span className="grid-item name-heading">Name</span>
-                    <span className="grid-item phne-heading">Phone</span>
+                    <span className="grid-item phone-heading">Phone</span>
                 </div> 
 
             {
-              this.state.subscribersListToShow.map(sub =>{
+              this.props.subscribersList.map(sub =>{
                 return <div key={sub.id} className='grid-container'>
                   <span className='grid-item'>{sub.name}</span>
                   <span className='grid-item'>{sub.phone}</span>
                   <span className="grit-item action-btn-container">
-                    <button className="custom-btn delete-btn" onClick={this.deleteHandler.bind(this,'Delete Clicked')}>Delete</button>
-                    <button className="custom-btn alter-btn" onClick={this.alterHandler}>Delete</button>
+                    <button className="custom-btn delete-btn" >Delete</button>
 
                   </span>
                   </div>
@@ -67,4 +71,4 @@ class App extends Component{
   }
 }
 
-export default App;
+export default ShowSubscribers;
