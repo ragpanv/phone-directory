@@ -7,16 +7,4 @@ const Header=function (properties) {
         </div>
     )
 }
-// class is used for dynamic
-// import React, {Component} from 'react';
-// class Header extends Component{
-//     render(){
-//         return(
-//             <div>
-//                 {this.properties.heading}
-//             </div>
-//         )
-//     }
-// }
-
 export default Header;
